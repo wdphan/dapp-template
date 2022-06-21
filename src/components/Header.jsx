@@ -1,12 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CgMenuGridO } from 'react-icons/cg'
 import full_logo from 'assets/full_logo.png'
 import Image from 'next/image'
 import { IoMdSearch } from 'react-icons/io'
-import { AmazonContext } from '../context/AmazonContext'
+import { DroppContext } from '../context/DroppContext'
 import { FaCoins } from 'react-icons/fa'
 import { ModalProvider, Modal, useModal, ModalTransition } from 'react-simple-hook-modal'
 import 'react-simple-hook-modal/dist/styles.css'
+import BuyModal from './BuyModal'
 
 const Header = () => {
 	const styles = {
@@ -19,13 +20,13 @@ const Header = () => {
 		coins: `ml-[10px] text-[#F28E54]`,
 	}
 
-	const { balance, buyTokens, getBalance } = useContext(AmazonContext)
+	const { balance, buyTokens, getBalance } = useContext(DroppContext)
 	const { openModal, isModalOpen, closeModal } = useModal()
 	return (
 		<ModalProvider>
 			<div className={styles.container}>
 				<div className={styles.logo}>
-					<Image src={full_logo} alt="amazon" height={80} width={190} className="object-cover" />
+					<Image src={full_logo} alt="amazon" height={80} width={200} className="object-cover" />
 				</div>
 				<div className={styles.search}>
 					<input type="text" placeholder="Search Your Assets..." className={styles.searchInput} />
@@ -44,9 +45,9 @@ const Header = () => {
 						</div>
 					) : (
 						<div className={(styles.balance, styles.menuItem)} onClick={openModal}>
-							0 AC <FaCoins className={styles.coins} />
+							0 DC <FaCoins className={styles.coins} />
 							<Modal isOpen={isModalOpen} transition={ModalTransition.SCALE}>
-								{/* <BuyModal close={closeModal} buyTokens={buyTokens} /> */}
+								<BuyModal close={closeModal} buyTokens={buyTokens} />
 							</Modal>
 						</div>
 					)}

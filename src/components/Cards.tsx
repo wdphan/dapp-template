@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import Card from './Card'
-import { AmazonContext } from '../context/AmazonContext'
+import { DroppContext } from '../context/DroppContext'
 
 const Cards = () => {
 	const styles = {
@@ -8,7 +8,7 @@ const Cards = () => {
 		title: `text-xl font-bold mb-[20px] text-3xl`,
 		cards: `flex items-center justify-center flex-wrap gap-[20px]`,
 	}
-	const { assets } = useContext(AmazonContext)
+	const { assets } = useContext(DroppContext)
 
 	return (
 		<div className={styles.container}>

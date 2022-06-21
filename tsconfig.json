@@ -20,6 +20,21 @@
 			"@images/*": ["public/images/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"src/pages/index.jsx",
+		"src/components/Main.jsx",
+		"src/components/Featured.jsx",
+		"src/components/ConnectWallet.tsx",
+		"src/components/Card.tsx",
+		"src/pages/_app.jsx",
+		"src/context/DroppContext.jsx",
+		"src/components/Sidebar.jsx",
+		"src/components/Header.tsx",
+		"src/components/Cards.jsx",
+		"src/lib/constants.jsx"
+	],
 	"exclude": ["node_modules"]
 }

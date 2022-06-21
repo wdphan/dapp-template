@@ -13,6 +13,7 @@
 		"@openzeppelin/contracts": "^4.6.0",
 		"@rainbow-me/rainbowkit": "^0.1.1",
 		"autoprefixer": "^10.4.7",
+		"dotenv": "^16.0.1",
 		"ethers": "^5.6.7",
 		"magic-sdk": "^8.1.1",
 		"moment": "^2.29.3",
@@ -24,10 +25,12 @@
 		"react-icons": "^4.4.0",
 		"react-moralis": "^1.4.0",
 		"react-simple-hook-modal": "^1.1.0",
+		"react-simple-modal-provider": "^1.9.0",
 		"react-spinners": "^0.12.0",
 		"tailwindcss": "^3.0.24",
 		"wagmi": "^0.4.1",
-		"web3uikit": "^0.1.160"
+		"web3uikit": "^0.1.160",
+		"yarn": "^1.22.19"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.35",

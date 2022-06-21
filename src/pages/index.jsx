@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { APP_NAME } from '@/lib/consts'
 import { BookOpenIcon, CodeIcon, ShareIcon } from '@heroicons/react/outline'
 import Sidebar from '../components/Sidebar'
 import Main from '../components/Main'

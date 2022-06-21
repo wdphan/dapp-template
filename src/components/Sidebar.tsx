@@ -9,7 +9,7 @@ import { FaBox } from 'react-icons/fa'
 import { BsFillBookmarkFill } from 'react-icons/bs'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { AiOutlineHistory } from 'react-icons/ai'
-import { AmazonContext } from '../context/AmazonContext'
+import { DroppContext } from '../context/DroppContext'
 
 const Sidebar = () => {
 	const styles = {
@@ -21,7 +21,7 @@ const Sidebar = () => {
 		walletAddress: `text-xl flex w-full justify-center font-extrabold`,
 		menu: `flex flex-col w-full h-full px-10 gap-10`,
 		menuItem: `flex items-center text-lg font-bold cursor-pointer gap-2`,
-		amazonLogo: `mr-4 flex object-cover`,
+		DroppLogo: `mr-4 flex object-cover`,
 		companyName: `text-lg font-bold flex flex-1 pl-10 items-center mt-[20px] pl-2`,
 		usernameInput: `bg-transparent border-white border-2 rounded-lg w-[80%] py-2 px-4 text-lg mt-[20px] placeholder:text-white focus:outline-none flex justify-center items-center text-white`,
 		username: `flex items-center w-full justify-center`,
@@ -29,7 +29,7 @@ const Sidebar = () => {
 	}
 
 	const { isAuthenticated, buyTokens, getBalance, nickname, setNickname, username, handleSetUsername } =
-		useContext(AmazonContext)
+		useContext(DroppContext)
 
 	return (
 		<div className={styles.container}>
@@ -67,16 +67,15 @@ const Sidebar = () => {
 						)}
 					</>
 				)}
-				<div className={styles.connectButton}>
+				<div className="">
 					<ConnectButton />
 				</div>
 			</div>
 			<div className={styles.menu}>
 				<Link href="/">
 					<div className={styles.menuItem}>
-						<Image src={logo} height={30} width={30} className={styles.amazonLogo} />
-						My Amazon
-						<br /> Board
+						<Image src={logo} height={30} width={30} className={styles.DroppLogo} />
+						Dropp Board
 					</div>
 				</Link>
 				<div className={styles.menuItem}>
@@ -91,7 +90,7 @@ const Sidebar = () => {
 					<BsFillPersonFill />
 					Profile
 				</div>
-				<Link href="/history">
+				<Link href="/History">
 					<div className={styles.menuItem}>
 						<AiOutlineHistory />
 						Transaction History
@@ -99,7 +98,7 @@ const Sidebar = () => {
 				</Link>
 			</div>
 			<div className={styles.companyName}>
-				<Image src={full_logo} alt="amazon" height={80} width={250} />
+				<Image src={full_logo} alt="Dropp" height={80} width={250} />
 			</div>
 		</div>
 	)
