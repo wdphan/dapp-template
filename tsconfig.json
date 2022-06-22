@@ -26,7 +26,7 @@
 		"**/*.tsx",
 		"src/pages/index.jsx",
 		"src/components/Main.jsx",
-		"src/components/Featured.jsx",
+		"src/components/Cover.jsx",
 		"src/components/ConnectWallet.tsx",
 		"src/components/Card.tsx",
 		"src/pages/_app.jsx",
