@@ -27,7 +27,7 @@
 		"src/pages/index.jsx",
 		"src/components/Main.jsx",
 		"src/components/Cover.jsx",
-		"src/components/ConnectWallet.jsx",
+		"src/components/ConnectWallet.tsx",
 		"src/components/Card.jsx",
 		"src/pages/_app.jsx",
 		"src/context/DroppContext.jsx",
