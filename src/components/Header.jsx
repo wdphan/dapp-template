@@ -8,20 +8,30 @@ import { FaCoins } from 'react-icons/fa'
 import { ModalProvider, Modal, useModal, ModalTransition } from 'react-simple-hook-modal'
 import 'react-simple-hook-modal/dist/styles.css'
 import BuyModal from './BuyModal'
+import Sidebar from './Sidebar.jsx'
+import Link from 'next/link'
 
 const Header = () => {
 	const styles = {
-		container: `h-[60px] w-full flex items-center gap-5 px-16`,
+		container: `h-[60px] w-full flex items-center gap-5 px-16 z-50`,
 		logo: `flex items-center ml-50px] cursor-pointer flex-1`,
 		search: `p-[25px] mr-[30px] w-[800px] h-[40px] rounded-xl flex flex items-center border border-[#29283D]`,
 		searchInput: `bg-transparent focus:outline-none border-none flex-1 items-center flex font-bold`,
-		menu: `flex items-center gap-6`,
-		menuItem: `flex items-center text-md font-bold cursor-pointer `,
+		menu: `flex items-center gap-6 `,
+		menuItem: `flex items-center text-md font-bold cursor-pointer z-50`,
 		coins: `ml-[10px] text-[#F28E54]`,
+	}
+
+	const [isShown, setIsShown] = useState(true)
+
+	const handleClick = event => {
+		// toggle shown state
+		setIsShown(current => !current)
 	}
 
 	const { balance, buyTokens, getBalance } = useContext(DroppContext)
 	const { openModal, isModalOpen, closeModal } = useModal()
+
 	return (
 		<ModalProvider>
 			<div className={styles.container}>
@@ -51,7 +61,9 @@ const Header = () => {
 							</Modal>
 						</div>
 					)}
-					<CgMenuGridO fontSize={30} className={styles.menuItem} />
+
+					<CgMenuGridO fontSize={30} onClick={handleClick} className="cursor-pointer z-50" />
+					{isShown && <Sidebar />}
 				</div>
 			</div>
 		</ModalProvider>

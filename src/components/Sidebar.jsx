@@ -10,11 +10,13 @@ import { BsFillBookmarkFill } from 'react-icons/bs'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { AiOutlineHistory } from 'react-icons/ai'
 import { DroppContext } from '../context/DroppContext'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { CgMenuGridO } from 'react-icons/cg'
 
 const Sidebar = () => {
 	const styles = {
-		container: `h-full w-[300px] flex flex-col bg-[#1B1C2C] text-white static ml-10 mt-3`,
-		profile: `w-full py-16 flex flex-col justify-center items-center rounded-3xl bg-gradient-to-t bg-[#29283D] mt-[40px] mb-[50px] border-2 border-[#29283D] ml-5`,
+		container: `mt-[53rem] ml-8 h-[100vh] w-[350px] flex flex-col items-center bg-[#1B1C2C] text-white static rounded-xl absolute`,
+		profile: `w-11/12 py-16 flex flex-col justify-center items-center rounded-3xl bg-gradient-to-t bg-[#29283D] mt-[40px] mb-[50px] border-2 border-[#29283D] `,
 		profilePicContainer: `flex rounded-full items-center justify-center w-full h-full mb-5`,
 		profilePic: `rounded-full object-cover`,
 		welcome: ` text-md mb-2 font-bold text-2xl text-white`,
@@ -38,7 +40,7 @@ const Sidebar = () => {
 					<>
 						<div className={styles.profilePicContainer}>
 							<Image
-								src={`https://avatars.dicebear.com/api/pixel-art/${username}.svg`}
+								src={`https://avatars.dicebear.com/api/avataaars/${username}.svg`}
 								alt="profile"
 								className={styles.profilePic}
 								height={100}
@@ -96,9 +98,6 @@ const Sidebar = () => {
 						Transaction History
 					</div>
 				</Link>
-			</div>
-			<div className={styles.companyName}>
-				<Image src={full_logo} alt="Dropp" height={80} width={250} />
 			</div>
 		</div>
 	)

@@ -3,17 +3,17 @@ import { DroppContext } from '../context/DroppContext'
 
 const Cover = () => {
 	return (
-		<div className="w-full flex flex-col justify-center items-center mt-10 relative">
+		<div className="w-full flex flex-col justify-center items-center mt-10">
 			<img
 				src="https://f8n-production-collection-assets.imgix.net/0x8A1f7cc4E1C7cA686BDD7fAC10cC30B850739bE7/4/nft.jpg?q=80&auto=format%2Ccompress&cs=srgb&max-w=1680&max-h=1680"
 				alt=""
-				class="object-cover h-[50vh] w-11/12 rounded-2xl"
+				className="object-cover h-[50vh] w-11/12 rounded-2xl relative"
 			/>
 
 			<img
 				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSug0VQmhVc2oP2MRT76XRtmF_KMe-DiA09Q_-CQ40XV_1n2TafqILev82YDksGSXp339c&usqp=CAU"
 				alt=""
-				class="object-cover h-[20vh] rounded-full absolute top-[20rem]"
+				className="object-cover h-[18vh] rounded-full absolute top-[30rem]"
 			/>
 			<div className="mt-24 font-bold text-3xl">METAMORPHICS</div>
 			<div className="flex flex-row space-x-5 mt-5">

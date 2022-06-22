@@ -17,6 +17,12 @@ export const DroppProvider = ({ children }) => {
 	const [currentAccount, setCurrentAccount] = useState('')
 	const [recentTransactions, setRecentTransactions] = useState([])
 	const [ownedItems, setOwnedItems] = useState([])
+	const [isShown, setIsShown] = useState(false)
+
+	const handleClick = event => {
+		// toggle shown state
+		setIsShown(current => !current)
+	}
 
 	const { authenticate, isAuthenticated, enableWeb3, Moralis, user, isWeb3Enabled } = useMoralis()
 
@@ -50,6 +56,15 @@ export const DroppProvider = ({ children }) => {
 				console.log(response.toString())
 				setBalance(response.toString())
 			}
+		} catch (error) {
+			console.log(error)
+		}
+	}
+
+	const getAssets = async () => {
+		try {
+			await enableWeb3()
+			setAssets(assetsData)
 		} catch (error) {
 			console.log(error)
 		}
@@ -148,15 +163,6 @@ export const DroppProvider = ({ children }) => {
 		setEtherscanLink(`https://goerli.etherscan.io/tx/${receipt.transactionHash}`)
 	}
 
-	const getAssets = async () => {
-		try {
-			await enableWeb3()
-			setAssets(assetsData)
-		} catch (error) {
-			console.log(error)
-		}
-	}
-
 	const getOwnedAssets = async () => {
 		try {
 			// let query = new Moralis.Query('_User')
@@ -203,6 +209,9 @@ export const DroppProvider = ({ children }) => {
 				buyAsset,
 				recentTransactions,
 				ownedItems,
+				handleClick,
+				isShown,
+				setIsShown,
 			}}
 		>
 			{children}

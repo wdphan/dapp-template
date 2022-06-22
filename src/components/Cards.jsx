@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import Card from './Card'
+import Card from './Card.jsx'
 import { DroppContext } from '../context/DroppContext'
 
 const Cards = () => {
@@ -16,7 +16,6 @@ const Cards = () => {
 				<div className={styles.cards}>
 					{assets.map(item => {
 						let asset = item.attributes
-
 						return <Card key={item.id} item={item.attributes} />
 					})}
 				</div>

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Sidebar.jsx'
 import Header from '../components/Header'
 import { DroppContext } from '../context/DroppContext'
 
@@ -20,7 +20,7 @@ const History = () => {
 
 	return (
 		<div className={styles.container}>
-			<Sidebar />
+			{/* <Sidebar /> */}
 
 			<div className={styles.main}>
 				<Header />
