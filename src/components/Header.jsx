@@ -12,9 +12,9 @@ import BuyModal from './BuyModal'
 const Header = () => {
 	const styles = {
 		container: `h-[60px] w-full flex items-center gap-5 px-16`,
-		logo: `flex items-center ml-[20px] cursor-pointer flex-1`,
-		search: `p-[25px] mr-[30px] w-[380px] h-[40px] bg-[#29283D] rounded-full shadow-lg flex flex items-center border border-[#29283D]`,
-		searchInput: `bg-transparent focus:outline-none border-none flex-1 items-center flex`,
+		logo: `flex items-center ml-50px] cursor-pointer flex-1`,
+		search: `p-[25px] mr-[30px] w-[800px] h-[40px] rounded-xl flex flex items-center border border-[#29283D]`,
+		searchInput: `bg-transparent focus:outline-none border-none flex-1 items-center flex font-bold`,
 		menu: `flex items-center gap-6`,
 		menuItem: `flex items-center text-md font-bold cursor-pointer `,
 		coins: `ml-[10px] text-[#F28E54]`,
@@ -26,7 +26,7 @@ const Header = () => {
 		<ModalProvider>
 			<div className={styles.container}>
 				<div className={styles.logo}>
-					<Image src={full_logo} alt="amazon" height={80} width={200} className="object-cover" />
+					<Image src={full_logo} alt="amazon" height={70} width={180} className="object-cover" />
 				</div>
 				<div className={styles.search}>
 					<input type="text" placeholder="Search Your Assets..." className={styles.searchInput} />

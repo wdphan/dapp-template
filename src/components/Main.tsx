@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext, useEffect } from 'react'
 import Cards from '../components/Cards'
 import Header from './Header'
-import Featured from './Featured.jsx'
+import Cover from './Cover.jsx'
 import { DroppContext } from '@/context/DroppContext'
 
 const Main = () => {
@@ -16,7 +16,7 @@ const Main = () => {
 	return (
 		<div className={styles.container}>
 			<Header />
-			<Featured />
+			<Cover />
 			<Cards />
 			{recentTransactions &&
 				recentTransactions.map((transaction, index) => {
