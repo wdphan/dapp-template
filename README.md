@@ -8,7 +8,7 @@
 
 Sign in with your wallet and swap some ETH for some Dropp Tokens with the Dropp marketplace, then use them to buy METAMORPHE NFTs. After purchasing NFTs, your transaction information is provided at the bottom of the modal and at the bottom of the homepage. Feel free to view your transaction history anytime with the sidebar -> history page.
 
-Essentially, it's a mini version of Rarible with a few added components.
+Essentially, it's a mini version of Rarible project page with a few added components.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/95723185/175124684-6ee61c9f-999c-4693-b9c6-873acca84fcc.gif" alt="animated" />
