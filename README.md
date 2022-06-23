@@ -11,7 +11,7 @@ Sign in with your wallet and swap some ETH for some Dropp Tokens with the Dropp 
 Essentially, it's a mini version of Rarible project page with a few added components.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/95723185/175124684-6ee61c9f-999c-4693-b9c6-873acca84fcc.gif" alt="animated" />
+<img width="600" src="https://user-images.githubusercontent.com/95723185/175187382-12f0ed25-0acd-483e-b7c2-7288ddd720be.gif" alt="animated" />
 </p>
 
 
